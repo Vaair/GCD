@@ -20,7 +20,8 @@
                                 <rect key="frame" x="171.5" y="433" width="71" height="30"/>
                                 <state key="normal" title="Go to 2VC"/>
                                 <connections>
-                                    <segue destination="Bhg-uH-IRU" kind="show" id="LhK-FF-h0L"/>
+                                    <action selector="imageView:" destination="noC-uL-Vuf" eventType="touchUpInside" id="8SU-AE-vpC"/>
+                                    <segue destination="Bhg-uH-IRU" kind="show" id="8Xz-Qz-SPx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,6 +35,7 @@
                     <navigationItem key="navigationItem" id="L5P-C3-ZWs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="noC-uL-Vuf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
@@ -52,16 +54,25 @@
                                     <constraint firstAttribute="height" constant="339" id="6Mu-BE-CTT"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="F1Y-19-zZO">
+                                <rect key="frame" x="197" y="247" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y62-VP-hic"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yHy-8Y-gHM" firstAttribute="top" secondItem="Y62-VP-hic" secondAttribute="top" id="7Ch-Tq-xVJ"/>
                             <constraint firstItem="yHy-8Y-gHM" firstAttribute="centerX" secondItem="Y62-VP-hic" secondAttribute="centerX" id="Vul-B7-lLa"/>
+                            <constraint firstItem="F1Y-19-zZO" firstAttribute="centerY" secondItem="yHy-8Y-gHM" secondAttribute="centerY" id="YZJ-ek-Zde"/>
+                            <constraint firstItem="F1Y-19-zZO" firstAttribute="centerX" secondItem="yHy-8Y-gHM" secondAttribute="centerX" id="bWd-b7-1p7"/>
                             <constraint firstItem="yHy-8Y-gHM" firstAttribute="width" secondItem="Y62-VP-hic" secondAttribute="width" multiplier="0.903382" id="x00-nn-nfE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ndi-qP-K7f"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="F1Y-19-zZO" id="vEI-AB-Ibs"/>
+                        <outlet property="imageView" destination="yHy-8Y-gHM" id="nWY-0B-zFd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4v-wu-aLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
